@@ -8,7 +8,7 @@
 57,Forestville Airport
 61,Kingston Norman Rogers Airport
 70,John C. Munro Hamilton International Airport
-71,Montréal / Saint-Hubert Airport
+71,MontrÃ©al / Saint-Hubert Airport
 74,Atikokan Municipal Airport
 76,St Jean Airport
 79,Waterloo Airport
@@ -24,7 +24,7 @@
 111,Quebec Jean Lesage International Airport
 113,Windsor Airport
 121,Thunder Bay Airport
-129,Rivière-du-Loup Airport
+129,RiviÃ¨re-du-Loup Airport
 130,Roberval Airport
 133,Sudbury Airport
 134,Sherbrooke Airport
@@ -48,30 +48,30 @@
 195,Gore Bay Manitoulin Airport
 199,Chris Hadfield Airport
 1784,Del Norte International Airport
-1788,Ciudad Acuña New International Airport
+1788,Ciudad AcuÃ±a New International Airport
 1790,Nuevo Casas Grandes Airport
 1792,Bachigualato Federal International Airport
-1794,Ciudad Obregón International Airport
-1796,Abraham González International Airport
+1794,Ciudad ObregÃ³n International Airport
+1796,Abraham GonzÃ¡lez International Airport
 1797,General Roberto Fierro Villalobos International Airport
 1803,Ensenada International Airport
-1805,General José María Yáñez International Airport
+1805,General JosÃ© MarÃ­a YÃ¡Ã±ez International Airport
 1807,General Ignacio P. Garcia International Airport
 1810,Plan De Guadalupe International Airport
 1814,Valle del Fuerte International Airport
 1817,Loreto International Airport
 1818,General Servando Canales International Airport
-1820,General Rodolfo Sánchez Taboada International Airport
+1820,General Rodolfo SÃ¡nchez Taboada International Airport
 1823,Monclova International Airport
 1825,General Mariano Escobedo International Airport
 1827,Nogales International Airport
-1828,Quetzalcóatl International Airport
-1833,Mar de Cortés International Airport
+1828,QuetzalcÃ³atl International Airport
+1833,Mar de CortÃ©s International Airport
 1834,Piedras Negras International Airport
 1839,General Lucio Blanco International Airport
 1841,San Felipe International Airport
 1845,Francisco Sarabia International Airport
-1847,General Abelardo L. Rodríguez International Airport
+1847,General Abelardo L. RodrÃ­guez International Airport
 1928,Andros Town Airport
 1930,Leonard M Thompson International Airport
 1931,San Andros Airport
@@ -227,7 +227,7 @@
 3585,Indianapolis International Airport
 3586,Whiteman Air Force Base
 3587,Akron Fulton International Airport
-3588,Greenwood–Leflore Airport
+3588,Greenwoodâ€“Leflore Airport
 3589,Westchester County Airport
 3590,Francis S Gabreski Airport
 3591,Jonesboro Municipal Airport
@@ -511,7 +511,7 @@
 4012,Naples Municipal Airport
 4014,Louisville International Standiford Field
 4015,Charlottesville Albemarle Airport
-4016,Roanoke–Blacksburg Regional Airport
+4016,Roanokeâ€“Blacksburg Regional Airport
 4017,Blue Grass Airport
 4018,Evansville Regional Airport
 4019,Albuquerque International Sunport
@@ -699,7 +699,7 @@
 5776,Valdosta Regional Airport
 5777,Worland Municipal Airport
 5779,Yakima Air Terminal McAllister Field
-5835,Ciudad Constitución Airport
+5835,Ciudad ConstituciÃ³n Airport
 5836,Guerrero Negro Airport
 5857,Arthur's Town Airport
 5860,Nassau Paradise Island Airport
@@ -1088,7 +1088,7 @@
 8654,Alexander Field South Wood County Airport
 8655,Clinton Municipal Airport
 8658,Beverly Municipal Airport
-8663,Trois-Rivières Airport
+8663,Trois-RiviÃ¨res Airport
 8664,Poplar Bluff Municipal Airport
 8665,Somerset Airport
 8666,Eastport Municipal Airport
@@ -1101,7 +1101,7 @@
 8744,Stevens Point Municipal Airport
 8747,Luce County Airport
 8759,Galion Municipal Airport
-8763,Clarksville–Montgomery County Regional Airport
+8763,Clarksvilleâ€“Montgomery County Regional Airport
 8771,Lompoc Airport
 8772,Chester County G O Carlson Airport
 8777,Lake Placid Airport
@@ -1319,7 +1319,7 @@
 11095,Cox Field
 11096,Coffeyville Municipal Airport
 11097,The Farm Airport
-11098,Greeley–Weld County Airport
+11098,Greeleyâ€“Weld County Airport
 11099,General Dewitt Spain Airport
 11101,Fremont Municipal Airport
 11102,La Grande/Union County Airport

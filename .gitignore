@@ -1,0 +1,6 @@
+CS225-OpenFlights-build/
+build/
+test
+.obj
+*.o
+*.d
