@@ -2,6 +2,6 @@
 #include "Graph.h"
 
 int main() {
-    cout << "Doing stuff..." << endl;
     Graph graph = Graph("../data/US_routes_contiguous.dat", "../data/US_airports_contiguous.dat");
+    graph.Dijkstra(351,187);
 }

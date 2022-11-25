@@ -2,6 +2,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <map>
+#include <queue>
 #include <unordered_map>
 
 #include "Graph.h"
@@ -38,3 +39,57 @@ Graph::Graph(string routes, string airports) {
     }
 }
 
+void Graph::Dijkstra(int source, int dest) {
+    set<int> visited;
+    unordered_map<int, int> prev;
+    unordered_map<int, int> dist;
+    for (auto p : nodeToAirportName) {
+        if (p.first == source) {
+            dist[p.first] = 0;
+        } else {
+            dist[p.first] = INT32_MAX;
+        }
+        prev[p.first] = -1;
+    }
+    struct Compare //used for priority queue to compare distances in pairs
+    {
+        bool operator()(const pair<int, int>& lhs, const pair<int, int>& rhs)
+        {
+            return lhs.second > rhs.second;
+        }
+    };
+    priority_queue <pair<int, int>, vector<pair<int,int>>, Compare>  q; //replace greater probably
+    pair<int, int> start(source, 0);
+    q.push(start);
+    
+    while (q.top().first != dest) {
+        pair<int, int> curr = q.top();
+        q.pop();
+        for (auto p : adjList[curr.first]) { //first is nieghbor node, second is distance from curr node
+            if (visited.count(p.first) == 1) {
+                continue;
+            }
+            if (p.second + dist[curr.first] < dist[p.first]) {
+                dist[p.first] = p.second + dist[curr.first];
+                prev[p.first] = curr.first;
+                pair<int, int> push(p.first, dist[p.first]);
+                q.push(push);
+            }
+        }
+        visited.insert(curr.first);
+    }
+    int e = dest;
+    vector<int> path;
+    while (true) {
+        path.push_back(e);
+        if (prev[e] == -1) {
+            break;
+        }
+        e = prev[e];
+    }
+    cout << "SOURCE: " + to_string(path[path.size() - 1]) + ", " + nodeToAirportName[source] << endl;
+    for (size_t i = path.size() - 2; i>0; i--) {
+        cout << to_string(path[i]) + ", " + nodeToAirportName[path[i]] << endl;
+    }
+    cout << "DESTINATION: " + to_string(path[0]) + ", " + nodeToAirportName[dest] << endl;
+}
