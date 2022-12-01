@@ -93,3 +93,23 @@ void Graph::Dijkstra(int source, int dest) {
     }
     cout << "DESTINATION: " + to_string(path[0]) + ", " + nodeToAirportName[dest] << endl;
 }
+
+void Graph::BFS(int source) {
+    set<int> visited; // a set to store references to all visited nodes
+    queue<int> que; // a queue to store references to nodes we should visit later
+
+    cout << "BFS Traversal" << endl; cout << "SOURCE: " + nodeToAirportName[source] << endl;
+    que.push(source);
+    visited.insert(source);
+    while (!que.empty()) {
+        int curr = que.front();
+        que.pop();
+        std::cout << to_string(curr) + " " + nodeToAirportName[curr] << std::endl;
+        for (auto neighbor : adjList[curr]) {
+            if (visited.count(neighbor.first) == 0) { // not in visited
+                que.push(neighbor.first);
+                visited.insert(neighbor.first);
+            }
+        }
+    }
+}
