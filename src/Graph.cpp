@@ -38,19 +38,33 @@ Graph::Graph(string routes, string airports) {
         airportNameToNode[otherfields[i][1]] = stoi(otherfields[i][0]);
     }
 }
-
-void Graph::Dijkstra(int source, int dest) {
+Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
+    adjList = m;
+}
+double Graph::Dijkstra(int source, int dest, bool airports) {
     set<int> visited;
     unordered_map<int, int> prev;
     unordered_map<int, int> dist;
-    for (auto p : nodeToAirportName) {
-        if (p.first == source) {
-            dist[p.first] = 0;
-        } else {
-            dist[p.first] = INT32_MAX;
+    if (airports) {
+        for (auto p : nodeToAirportName) {
+            if (p.first == source) {
+                dist[p.first] = 0;
+            } else {
+                dist[p.first] = INT32_MAX;
+            }
+            prev[p.first] = -1;
         }
-        prev[p.first] = -1;
+    } else {
+        for (int i = 0; i < 50; i++) { //random constant for testing
+            if (i == source) {
+                dist[i] = 0;
+            } else {
+                dist[i] = INT32_MAX;
+            }
+            prev[i] = -1;
+        }
     }
+    
     struct Compare //used for priority queue to compare distances in pairs
     {
         bool operator()(const pair<int, int>& lhs, const pair<int, int>& rhs)
@@ -78,6 +92,9 @@ void Graph::Dijkstra(int source, int dest) {
         }
         visited.insert(curr.first);
     }
+    if (!airports) {
+        return dist[dest];
+    }
     int e = dest;
     vector<int> path;
     while (true) {
@@ -92,6 +109,7 @@ void Graph::Dijkstra(int source, int dest) {
         cout << to_string(path[i]) + ", " + nodeToAirportName[path[i]] << endl;
     }
     cout << "DESTINATION: " + to_string(path[0]) + ", " + nodeToAirportName[dest] << endl;
+    return dist[dest];
 }
 
 void Graph::BFS(int source) {

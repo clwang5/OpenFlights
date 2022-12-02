@@ -14,8 +14,10 @@ using namespace std;
 class Graph {
     public:
         Graph();
+        Graph(unordered_map<int, vector<pair<int, double>>> m);
         Graph(string routes, string airports);
-        void Dijkstra(int source, int dest);
+        // param aiports is only used for testing the algorithm, true if using airport data set, false if otherwise
+        double Dijkstra(int source, int dest, bool airports); //returns shortest distance
         void BFS(int source);
     private:
         // Do we even need these, and is there a more efficient way...
