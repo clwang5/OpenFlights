@@ -22,6 +22,7 @@ Graph::Graph(string routes, string airports) {
     }
     for (unsigned i = 0; i < fields.size(); i++) {
         adjList[stoi(fields[i][0])].push_back(make_pair(stoi(fields[i][1]), stod(fields[i][2])));
+        adjList[stoi(fields[i][1])];
     }
 
     // Mapping airport name to node and vice versa
@@ -35,7 +36,6 @@ Graph::Graph(string routes, string airports) {
     }
     for (unsigned i = 0; i < otherfields.size(); i++) {
         nodeToAirportName[stoi(otherfields[i][0])] = otherfields[i][1];
-        airportNameToNode[otherfields[i][1]] = stoi(otherfields[i][0]);
     }
 }
 Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
@@ -129,5 +129,57 @@ void Graph::BFS(int source) {
                 visited.insert(neighbor.first);
             }
         }
+    }
+}
+
+void Graph::Tarjan() {
+    int n = adjList.size();
+    stack<int> s;
+    vector<bool> onStack(n, false);
+    vector<int> disc(n, -1);
+    vector<int> low(n, -1);
+    vector<int> SCCs(n, -1);
+
+    for (int i = 0; i < n; i++) {
+        if (disc[i] == -1) {
+            TarjanHelper(i, s, onStack, disc, low, SCCs);
+        }
+    }
+
+    for(auto& elem : SCCs) {
+        cout << elem << "," << endl;
+    }
+}
+
+void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
+    static int discovered = 0;
+    static int sccID = 0;
+
+    s.push(node);
+    onStack[node] = true;
+    disc[node] = low[node] = discovered;
+    discovered++;
+
+    for (auto& elem : adjList[node]) {
+        int adjacentNode = elem.first;
+        if (disc[adjacentNode] == -1) {
+            TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs);
+        }
+        if (onStack[adjacentNode]) {
+            low[node] = min(low[node], low[adjacentNode]);
+        }
+    }
+
+    if (disc[node] == low[node]) {
+        while(!s.empty()) {
+            int p = s.top();
+            s.pop();
+            onStack[p] = false;
+            SCCs[p] = sccID;
+            if (p == node) {
+                break;
+            }
+        }
+        sccID++;
     }
 }
