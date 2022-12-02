@@ -149,27 +149,29 @@ void Graph::Tarjan() {
         }
     }
 
-    for(auto& elem : SCCs) {
+    for(auto& elem : SCCs) { //all nodes with the same number in the same SCC, nodes represented by index
         cout << elem << "," << endl;
     }
 }
 
 void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
-    static int discovered = 0;
+    static int discoveryTime = 0;
     static int sccID = 0;
 
     s.push(node);
     onStack[node] = true;
-    disc[node] = low[node] = discovered;
-    discovered++;
+    disc[node] = low[node] = discoveryTime;
+    discoveryTime++;
 
     for (auto& elem : adjList[node]) {
         int adjacentNode = elem.first;
         if (disc[adjacentNode] == -1) {
             TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs);
-        }
-        if (onStack[adjacentNode]) {
             low[node] = min(low[node], low[adjacentNode]);
+        }
+        else if (onStack[adjacentNode]) { // if adjacent node not on stack, represents a cross edge between node and adjacent node
+                                          // so that means these two nodes are not a part of the same SCC, so do not process low[node]
+            low[node] = min(low[node], disc[adjacentNode]);
         }
     }
 
