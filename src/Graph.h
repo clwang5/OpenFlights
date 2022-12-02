@@ -19,7 +19,7 @@ class Graph {
         Graph(string routes, string airports);
         // param aiports is only used for testing the algorithm, true if using airport data set, false if otherwise
         double Dijkstra(int source, int dest, bool airports); //returns shortest distance
-        void BFS(int source);
+        vector<int> BFS(int source);
         void Tarjan();
     private:
         void TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs);

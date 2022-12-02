@@ -112,17 +112,18 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
     return dist[dest];
 }
 
-void Graph::BFS(int source) {
+vector<int> Graph::BFS(int source) {
     set<int> visited; // a set to store references to all visited nodes
     queue<int> que; // a queue to store references to nodes we should visit later
-
+    vector<int> path;
     cout << "BFS Traversal" << endl; cout << "SOURCE: " + nodeToAirportName[source] << endl;
     que.push(source);
     visited.insert(source);
     while (!que.empty()) {
         int curr = que.front();
+        path.push_back(curr);
         que.pop();
-        std::cout << to_string(curr) + " " + nodeToAirportName[curr] << std::endl;
+        std::cout << to_string(curr) + " " + nodeToAirportName[curr] << " ";
         for (auto neighbor : adjList[curr]) {
             if (visited.count(neighbor.first) == 0) { // not in visited
                 que.push(neighbor.first);
@@ -130,6 +131,8 @@ void Graph::BFS(int source) {
             }
         }
     }
+    std::cout << std::endl;
+    return path;
 }
 
 void Graph::Tarjan() {

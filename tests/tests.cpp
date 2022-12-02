@@ -35,3 +35,20 @@ TEST_CASE("Undirected graph") { //taken from resources page in cs225
 //negative edges
 
 //single heavy vs many light weight paths
+
+TEST_CASE("BFS") { 
+    // example : https://www.programiz.com/dsa/graph-bfs
+    
+    unordered_map<int, vector<pair<int, double>>> adjList;
+    adjList[0]= vector<pair<int, double>>{pair<int, double>(1,10), pair<int, double>(3,20)};
+    adjList[1]= vector<pair<int, double>>{pair<int, double>(0,5),pair<int, double>(2,5)};
+    adjList[2]= vector<pair<int, double>>{pair<int, double>(0,25), pair<int, double>(1,30), pair<int, double>(4,50)};
+    adjList[3]= vector<pair<int, double>>{pair<int, double>(0,5)};
+    adjList[4]= vector<pair<int, double>>{pair<int, double>(2,9)};
+    Graph g(adjList);
+    REQUIRE(g.BFS(0)==vector<int>{0,1,3,2,4});
+    REQUIRE(g.BFS(1)==vector<int>{1,0,2,3,4});
+    REQUIRE(g.BFS(2)==vector<int>{2,0,1,4,3});
+    REQUIRE(g.BFS(3)==vector<int>{3,0,1,2,4});
+    REQUIRE(g.BFS(4)==vector<int>{4,2,0,1,3});
+}
