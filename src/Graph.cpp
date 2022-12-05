@@ -22,6 +22,7 @@ Graph::Graph(string routes, string airports) {
     }
     for (unsigned i = 0; i < fields.size(); i++) {
         adjList[stoi(fields[i][0])].push_back(make_pair(stoi(fields[i][1]), stod(fields[i][2])));
+        adjList[stoi(fields[i][1])];
     }
 
     // Mapping airport name to node and vice versa
@@ -35,7 +36,6 @@ Graph::Graph(string routes, string airports) {
     }
     for (unsigned i = 0; i < otherfields.size(); i++) {
         nodeToAirportName[stoi(otherfields[i][0])] = otherfields[i][1];
-        airportNameToNode[otherfields[i][1]] = stoi(otherfields[i][0]);
     }
 }
 Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
@@ -118,22 +118,79 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
     return dist[dest];
 }
 
-void Graph::BFS(int source) {
+vector<int> Graph::BFS(int source) {
     set<int> visited; // a set to store references to all visited nodes
     queue<int> que; // a queue to store references to nodes we should visit later
-
+    vector<int> path;
     cout << "BFS Traversal" << endl; cout << "SOURCE: " + nodeToAirportName[source] << endl;
     que.push(source);
     visited.insert(source);
     while (!que.empty()) {
         int curr = que.front();
+        path.push_back(curr);
         que.pop();
-        std::cout << to_string(curr) + " " + nodeToAirportName[curr] << std::endl;
+        std::cout << to_string(curr) + " " + nodeToAirportName[curr] << " ";
         for (auto neighbor : adjList[curr]) {
             if (visited.count(neighbor.first) == 0) { // not in visited
                 que.push(neighbor.first);
                 visited.insert(neighbor.first);
             }
         }
+    }
+    std::cout << std::endl;
+    return path;
+}
+
+void Graph::Tarjan() {
+    int n = adjList.size();
+    stack<int> s;
+    vector<bool> onStack(n, false);
+    vector<int> disc(n, -1);
+    vector<int> low(n, -1);
+    vector<int> SCCs(n, -1);
+
+    for (int i = 0; i < n; i++) {
+        if (disc[i] == -1) {
+            TarjanHelper(i, s, onStack, disc, low, SCCs);
+        }
+    }
+
+    for(auto& elem : SCCs) { //all nodes with the same number in the same SCC, nodes represented by index
+        cout << elem << "," << endl;
+    }
+}
+
+void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
+    static int discoveryTime = 0;
+    static int sccID = 0;
+
+    s.push(node);
+    onStack[node] = true;
+    disc[node] = low[node] = discoveryTime;
+    discoveryTime++;
+
+    for (auto& elem : adjList[node]) {
+        int adjacentNode = elem.first;
+        if (disc[adjacentNode] == -1) {
+            TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs);
+            low[node] = min(low[node], low[adjacentNode]);
+        }
+        else if (onStack[adjacentNode]) { // if adjacent node not on stack, represents a cross edge between node and adjacent node
+                                          // so that means these two nodes are not a part of the same SCC, so do not process low[node]
+            low[node] = min(low[node], disc[adjacentNode]);
+        }
+    }
+
+    if (disc[node] == low[node]) {
+        while(!s.empty()) {
+            int p = s.top();
+            s.pop();
+            onStack[p] = false;
+            SCCs[p] = sccID;
+            if (p == node) {
+                break;
+            }
+        }
+        sccID++;
     }
 }

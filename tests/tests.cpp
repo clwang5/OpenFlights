@@ -6,6 +6,7 @@
 #include <vector>
 #include <set>
 #include "Graph.h"
+using namespace std;
 
 TEST_CASE("Empty Graph") {
     Graph g;
@@ -57,9 +58,25 @@ TEST_CASE("Single heavy vs many light-weighted (directed)") { //taken from lectu
     m[0] = m[0] = vector<pair<int, double>>{pair<int, double>(6, 5), pair<int, double>(1,1)};
     REQUIRE(g.Dijkstra(0,6, false) == 5);
 }
-//single heavy vs many light weight paths
 TEST_CASE("OpenFlights Dataset") {
     Graph graph = Graph("../data/US_routes_contiguous.dat", "../data/US_airports_contiguous.dat");
     REQUIRE(graph.Dijkstra(1,33, true)==1744.0); //LAX to ORD (neighboring nodes) compared using openflights data
     REQUIRE(graph.Dijkstra(328,430, true)==370.0); //CPR to HDN (not neighboring nodes), small airports that're only connected via DEN
+}
+
+TEST_CASE("BFS") { 
+    // example : https://www.programiz.com/dsa/graph-bfs
+    
+    unordered_map<int, vector<pair<int, double>>> adjList;
+    adjList[0]= vector<pair<int, double>>{pair<int, double>(1,10), pair<int, double>(3,20)};
+    adjList[1]= vector<pair<int, double>>{pair<int, double>(0,5),pair<int, double>(2,5)};
+    adjList[2]= vector<pair<int, double>>{pair<int, double>(0,25), pair<int, double>(1,30), pair<int, double>(4,50)};
+    adjList[3]= vector<pair<int, double>>{pair<int, double>(0,5)};
+    adjList[4]= vector<pair<int, double>>{pair<int, double>(2,9)};
+    Graph g(adjList);
+    REQUIRE(g.BFS(0)==vector<int>{0,1,3,2,4});
+    REQUIRE(g.BFS(1)==vector<int>{1,0,2,3,4});
+    REQUIRE(g.BFS(2)==vector<int>{2,0,1,4,3});
+    REQUIRE(g.BFS(3)==vector<int>{3,0,1,2,4});
+    REQUIRE(g.BFS(4)==vector<int>{4,2,0,1,3});
 }
