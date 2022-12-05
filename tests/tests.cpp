@@ -55,8 +55,9 @@ TEST_CASE("Single heavy vs many light-weighted (directed)") { //taken from lectu
 
     REQUIRE(g.Dijkstra(0,6, false) == 6); //6 instead of a direct path of 8
 
-    m[0] = m[0] = vector<pair<int, double>>{pair<int, double>(6, 5), pair<int, double>(1,1)};
-    REQUIRE(g.Dijkstra(0,6, false) == 5);
+    m[0] = vector<pair<int, double>>{pair<int, double>(6, 4), pair<int, double>(1,1)};
+    Graph graph(m);
+    REQUIRE(graph.Dijkstra(0,6, false) == 4);
 }
 TEST_CASE("OpenFlights Dataset") {
     Graph graph = Graph("../data/US_routes_contiguous.dat", "../data/US_airports_contiguous.dat");
