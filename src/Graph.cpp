@@ -42,6 +42,9 @@ Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
     adjList = m;
 }
 double Graph::Dijkstra(int source, int dest, bool airports) {
+    if (adjList.empty()) {
+        throw std::runtime_error("EMPTY GRAPH");
+    }
     set<int> visited;
     unordered_map<int, int> prev;
     unordered_map<int, int> dist;
@@ -76,7 +79,7 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
     pair<int, int> start(source, 0);
     q.push(start);
     
-    while (q.top().first != dest) {
+    while (!q.empty() && q.top().first != dest) {
         pair<int, int> curr = q.top();
         q.pop();
         for (auto p : adjList[curr.first]) { //first is nieghbor node, second is distance from curr node
@@ -91,6 +94,9 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
             }
         }
         visited.insert(curr.first);
+    }
+    if (q.empty()) { //no path from source to dest
+        throw std::runtime_error("NO PATH FROM SOURCE TO DEST");
     }
     if (!airports) {
         return dist[dest];

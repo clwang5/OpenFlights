@@ -13,7 +13,7 @@ using namespace std;
 
 class Graph {
     public:
-        Graph();
+        Graph() = default;
         Graph(unordered_map<int, vector<pair<int, double>>> m);
         Graph(string routes, string airports);
         // param aiports is only used for testing the algorithm, true if using airport data set, false if otherwise
