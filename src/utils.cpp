@@ -14,21 +14,6 @@ std::string file_to_string(const std::string& filename){
   return strStream.str();
 }
 
-std::string TrimRight(const std::string & str) {
-    std::string tmp = str;
-    return tmp.erase(tmp.find_last_not_of(" ") + 1);
-}
-
-std::string TrimLeft(const std::string & str) {
-    std::string tmp = str;
-    return tmp.erase(0, tmp.find_first_not_of(" "));
-}
-
-std::string Trim(const std::string & str) {
-    std::string tmp = str;
-    return TrimLeft(TrimRight(str));
-}
-
 int SplitString(const std::string & str1, char sep, std::vector<std::string> &fields) {
     std::string str = str1;
     std::string::size_type pos;
