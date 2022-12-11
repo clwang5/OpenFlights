@@ -38,9 +38,12 @@ Graph::Graph(string routes, string airports) {
         nodeToAirportName[stoi(otherfields[i][0])] = otherfields[i][1];
     }
 }
+
+// Constructor for ease of making test cases 
 Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
     adjList = m;
 }
+
 double Graph::Dijkstra(int source, int dest, bool airports) {
     if (adjList.empty()) {
         throw std::runtime_error("EMPTY GRAPH");
@@ -110,12 +113,26 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
         }
         e = prev[e];
     }
+
     cout << "SOURCE: " + to_string(path[path.size() - 1]) + ", " + nodeToAirportName[source] << endl;
     for (size_t i = path.size() - 2; i>0; i--) {
         cout << to_string(path[i]) + ", " + nodeToAirportName[path[i]] << endl;
     }
     cout << "DESTINATION: " + to_string(path[0]) + ", " + nodeToAirportName[dest] << endl;
+
+    for (int i = (int) path.size() - 1; i >= 0; i--) {
+        shortestPath.push_back(path[i]);
+    }
+
     return dist[dest];
+}
+
+vector<int> Graph::getShortestPath() {
+    return shortestPath;
+}
+
+unordered_map<int, string> Graph::getNodeToAirportName() {
+    return nodeToAirportName;
 }
 
 vector<int> Graph::BFS(int source) {
@@ -141,7 +158,7 @@ vector<int> Graph::BFS(int source) {
     return path;
 }
 
-void Graph::Tarjan() {
+vector<int> Graph::Tarjan() {
     int n = adjList.size();
     stack<int> s;
     vector<bool> onStack(n, false);
@@ -158,6 +175,8 @@ void Graph::Tarjan() {
     for(auto& elem : SCCs) { //all nodes with the same number in the same SCC, nodes represented by index
         cout << elem << "," << endl;
     }
+
+    return SCCs;
 }
 
 void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
