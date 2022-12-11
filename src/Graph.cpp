@@ -114,12 +114,6 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
         e = prev[e];
     }
 
-    cout << "SOURCE: " + to_string(path[path.size() - 1]) + ", " + nodeToAirportName[source] << endl;
-    for (size_t i = path.size() - 2; i>0; i--) {
-        cout << to_string(path[i]) + ", " + nodeToAirportName[path[i]] << endl;
-    }
-    cout << "DESTINATION: " + to_string(path[0]) + ", " + nodeToAirportName[dest] << endl;
-
     for (int i = (int) path.size() - 1; i >= 0; i--) {
         shortestPath.push_back(path[i]);
     }
@@ -139,14 +133,12 @@ vector<int> Graph::BFS(int source) {
     set<int> visited; // a set to store references to all visited nodes
     queue<int> que; // a queue to store references to nodes we should visit later
     vector<int> path;
-    cout << "BFS Traversal" << endl; cout << "SOURCE: " + nodeToAirportName[source] << endl;
     que.push(source);
     visited.insert(source);
     while (!que.empty()) {
         int curr = que.front();
         path.push_back(curr);
         que.pop();
-        std::cout << to_string(curr) + " " + nodeToAirportName[curr] << " ";
         for (auto neighbor : adjList[curr]) {
             if (visited.count(neighbor.first) == 0) { // not in visited
                 que.push(neighbor.first);
@@ -154,7 +146,6 @@ vector<int> Graph::BFS(int source) {
             }
         }
     }
-    std::cout << std::endl;
     return path;
 }
 
@@ -172,11 +163,7 @@ vector<int> Graph::Tarjan() {
         }
     }
 
-    for(auto& elem : SCCs) { //all nodes with the same number in the same SCC, nodes represented by index
-        cout << elem << "," << endl;
-    }
-
-    return SCCs;
+    return SCCs; //all nodes with the same number in the same SCC, nodes represented by index
 }
 
 void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
