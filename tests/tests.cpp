@@ -6,13 +6,15 @@
 #include <vector>
 #include <set>
 #include "Graph.h"
+using namespace std;
 
-TEST_CASE("Simple connected") {
-    Graph graph = Graph("../data/US_routes_contiguous.dat", "../data/US_airports_contiguous.dat");
-    REQUIRE(graph.Dijkstra(1,33, true)==1744.0); //LAX to ORD (neighboring nodes) compared using openflights data
-    REQUIRE(graph.Dijkstra(328,430, true)==370.0); //CPR to HDN (not neighboring nodes), small airports that're only connected via DEN
+TEST_CASE("Empty Graph") {
+    Graph g;
+    REQUIRE_THROWS_AS(g.Dijkstra(0,5,false), std::runtime_error);
+    REQUIRE_THROWS_AS(g.Dijkstra(5,5,false), std::runtime_error);
+    REQUIRE_THROWS_AS(g.Dijkstra(2,-1,false), std::runtime_error);
 }
-TEST_CASE("Undirected graph") { //taken from resources page in cs225
+TEST_CASE("Bean (undirected)") { //taken from resources page in cs225
     unordered_map<int, vector<pair<int, double>>> m;
     m[0] = vector<pair<int, double>>{pair<int, double>(1,21), pair<int, double>(2,50)}; //Siebel
     m[1] = vector<pair<int, double>>{pair<int, double>(3,57), pair<int, double>(0,21)}; //Rantoul
@@ -22,19 +24,46 @@ TEST_CASE("Undirected graph") { //taken from resources page in cs225
     m[5] = vector<pair<int, double>>{pair<int, double>(3,57), pair<int, double>(4,40), pair<int, double>(6,51), pair<int, double>(7,1)}; //Chicago
     m[6] = vector<pair<int, double>>{pair<int, double>(4,57), pair<int, double>(5,51)}; //Bean
     m[7] = vector<pair<int, double>>{pair<int, double>(5,1)}; //Bean
-    Graph g(m);
-    REQUIRE(g.Dijkstra(0,0, false)==0.0);
-    REQUIRE(g.Dijkstra(0,1, false)==21);
-    REQUIRE(g.Dijkstra(0,2, false)==50.0);
-    REQUIRE(g.Dijkstra(0,3, false)==78.0);
-    REQUIRE(g.Dijkstra(0,4, false)==92.0);
-    REQUIRE(g.Dijkstra(0,5, false)==132.0);
-    REQUIRE(g.Dijkstra(0,6, false)==149.0);
-    REQUIRE(g.Dijkstra(0,7, false)==133.0);
+    SECTION("Undirected graph") {
+        Graph g(m);
+        REQUIRE(g.Dijkstra(0,0, false)==0.0);
+        REQUIRE(g.Dijkstra(0,1, false)==21);
+        REQUIRE(g.Dijkstra(0,2, false)==50.0);
+        REQUIRE(g.Dijkstra(0,3, false)==78.0);
+        REQUIRE(g.Dijkstra(0,4, false)==92.0);
+        REQUIRE(g.Dijkstra(0,5, false)==132.0);
+        REQUIRE(g.Dijkstra(0,6, false)==149.0);
+        REQUIRE(g.Dijkstra(0,7, false)==133.0);
+    }
+    SECTION("No path from source to dest") {
+        m[8] = vector<pair<int, double>>{}; //no connections
+        Graph g(m);
+        REQUIRE_THROWS_AS(g.Dijkstra(0,8, false), std::runtime_error);
+        REQUIRE_THROWS_AS(g.Dijkstra(8,0, false), std::runtime_error);
+    }
 }
-//negative edges
+TEST_CASE("Single heavy vs many light-weighted (directed)") { //taken from lecture
+    unordered_map<int, vector<pair<int, double>>> m;
+    m[0] = vector<pair<int, double>>{pair<int, double>(6, 8), pair<int, double>(1,1)};
+    m[1] = vector<pair<int, double>>{pair<int, double>(2, 1)};
+    m[2] = vector<pair<int, double>>{pair<int, double>(3, 1)};
+    m[3] = vector<pair<int, double>>{pair<int, double>(4, 1)};
+    m[4] = vector<pair<int, double>>{pair<int, double>(5, 1)};
+    m[5] = vector<pair<int, double>>{pair<int, double>(6, 1)};
+    m[6] = vector<pair<int, double>>{};
+    Graph g(m);
 
-//single heavy vs many light weight paths
+    REQUIRE(g.Dijkstra(0,6, false) == 6); //6 instead of a direct path of 8
+
+    m[0] = vector<pair<int, double>>{pair<int, double>(6, 4), pair<int, double>(1,1)};
+    Graph graph(m);
+    REQUIRE(graph.Dijkstra(0,6, false) == 4);
+}
+TEST_CASE("OpenFlights Dataset") {
+    Graph graph = Graph("../data/US_routes_contiguous.dat", "../data/US_airports_contiguous.dat");
+    REQUIRE(graph.Dijkstra(1,33, true)==1744.0); //LAX to ORD (neighboring nodes) compared using openflights data
+    REQUIRE(graph.Dijkstra(328,430, true)==370.0); //CPR to HDN (not neighboring nodes), small airports that're only connected via DEN
+}
 
 TEST_CASE("BFS") { 
     // example : https://www.programiz.com/dsa/graph-bfs

@@ -1,4 +1,4 @@
-# Install script for directory: /workspaces/CS225/OpenFlights/lib
+# Install script for directory: /workspaces/CS 225/CS225-OpenFlights/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

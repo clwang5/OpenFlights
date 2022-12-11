@@ -42,6 +42,9 @@ Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
     adjList = m;
 }
 double Graph::Dijkstra(int source, int dest, bool airports) {
+    if (adjList.empty()) {
+        throw std::runtime_error("EMPTY GRAPH");
+    }
     set<int> visited;
     unordered_map<int, int> prev;
     unordered_map<int, int> dist;
@@ -76,7 +79,7 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
     pair<int, int> start(source, 0);
     q.push(start);
     
-    while (q.top().first != dest) {
+    while (!q.empty() && q.top().first != dest) {
         pair<int, int> curr = q.top();
         q.pop();
         for (auto p : adjList[curr.first]) { //first is nieghbor node, second is distance from curr node
@@ -91,6 +94,9 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
             }
         }
         visited.insert(curr.first);
+    }
+    if (q.empty()) { //no path from source to dest
+        throw std::runtime_error("NO PATH FROM SOURCE TO DEST");
     }
     if (!airports) {
         return dist[dest];
@@ -149,27 +155,29 @@ void Graph::Tarjan() {
         }
     }
 
-    for(auto& elem : SCCs) {
+    for(auto& elem : SCCs) { //all nodes with the same number in the same SCC, nodes represented by index
         cout << elem << "," << endl;
     }
 }
 
 void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
-    static int discovered = 0;
+    static int discoveryTime = 0;
     static int sccID = 0;
 
     s.push(node);
     onStack[node] = true;
-    disc[node] = low[node] = discovered;
-    discovered++;
+    disc[node] = low[node] = discoveryTime;
+    discoveryTime++;
 
     for (auto& elem : adjList[node]) {
         int adjacentNode = elem.first;
         if (disc[adjacentNode] == -1) {
             TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs);
-        }
-        if (onStack[adjacentNode]) {
             low[node] = min(low[node], low[adjacentNode]);
+        }
+        else if (onStack[adjacentNode]) { // if adjacent node not on stack, represents a cross edge between node and adjacent node
+                                          // so that means these two nodes are not a part of the same SCC, so do not process low[node]
+            low[node] = min(low[node], disc[adjacentNode]);
         }
     }
 
