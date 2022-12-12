@@ -25,7 +25,7 @@ Graph::Graph(string routes, string airports) {
         adjList[stoi(fields[i][1])];
     }
 
-    // Mapping airport name to node and vice versa
+    // Mapping node to airport name
     vector<string> otherlines;
     vector<vector<string>> otherfields;
     string otherstr = file_to_string(airports);
@@ -45,6 +45,7 @@ Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
 }
 
 double Graph::Dijkstra(int source, int dest, bool airports) {
+    shortestPath.clear();
     if (adjList.empty()) {
         throw std::runtime_error("EMPTY GRAPH");
     }
