@@ -13,8 +13,8 @@
 ## Data
 We are using the [openflights.org]([https://openflights.org/data.html](https://openflights.org/data.html)) data and focusing on the following two files:
 
-- [Airport database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat)
-- [Route database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)
+- [Airport raw database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat)
+- [Route raw database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)
 
 
 ## Repo Structure
@@ -36,7 +36,7 @@ Make sure you are running the program in the [Docker](https://www.docker.com/) e
 Then do `mkdir build`,`cd build` and lastly, `cmake ..`.
 All the main functions/algorithms are in [`/entry/main`](https://github.com/clwang5/OpenFlights/blob/main/entry/main.cpp)
 For, output files, the directory can be specified (as long as it exists) of where to put these output files.
-For using custom datasets, please see "Creativity".
+For using custom datasets, please see <a href="#creativity">Creativity</a>.
 The required inputs as well as commands for each of the functionality are as follows:
 
 
