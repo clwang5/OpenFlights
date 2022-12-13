@@ -68,8 +68,12 @@ To run the test suite, run `make test` then `./test` in the build directory.
 We constructed tests cases considering things such as empty graphs, directed graphs with nodes with and without incoming and outgoing edges, directed graphs with many paths that can be taken from every node and differing weights of those paths, graphs with self loops, and graphs with mulitple SCCs, and any other scenarios where edge cases may form. Our test cases focuses on the functionality of our graph data processing, Dijkstra's algorithm, Tarjan's algorithm, and Breadth-First-Search.
 
 ## Creativity
-If you want to use ur own custom datasets, please follow the format EXACTLY of edges and weights in [this file](https://github.com/clwang5/OpenFlights/blob/main/data/US_airports_contiguous.dat) and [this file](https://github.com/clwang5/OpenFlights/blob/main/data/US_routes_contiguous.dat).
-Please make sure the node numbering is contiguous and starting from 0 as well as including the newline at the bottom of each file, otherwise a segfault will occur.
+If you want to use ur own custom datasets, please follow the format EXACTLY of nodes and node labels in [this file](https://github.com/clwang5/OpenFlights/blob/main/data/US_airports_contiguous.dat) and edges and weights in [this file](https://github.com/clwang5/OpenFlights/blob/main/data/US_routes_contiguous.dat). 
+The first file represents each node and its name in a CSV manner. The second file represents the edge between two nodes and its weight in a CSV manner.
+Please make sure the node numbering is contiguous and starting from 0, the file is CSV separated with no spaces after commas, and the newline at the bottom of each file is included, otherwise a segfault will occur.
+Then, to run each algorithm, please follow the <a href="#running-instructions">Running Instructions</a>. 
+Reminder that all filepaths are relative to the build directory.
+Dijkstra's Example: ./main d EDGES_WEIGHTS_FILEPATH NODES_LABELS_FILEPATH SOURCE_NODE DEST_NODE OUTPUT_DIR
 
 
 ## Team
