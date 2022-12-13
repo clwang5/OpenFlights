@@ -158,44 +158,58 @@ vector<int> Graph::BFS(int source) {
 }
 
 vector<int> Graph::Tarjan() {
+    
     int n = adjList.size();
-    stack<int> s;
-    vector<bool> onStack(n, false);
-    vector<int> disc(n, -1);
-    vector<int> low(n, -1);
-    vector<int> SCCs(n, -1);
 
+    //stack for keeping track of nodes of strongly connected components
+    stack<int> s;
+
+    // vector for O(1) check if node is on stack
+    vector<bool> onStack(n, false);
+
+    //initialize discovery and lowlinks vectors
+    vector<int> disc(n, -1);
+    vector<int> low(n, -1); 
+
+    vector<int> SCCs(n, -1); //to return, keep track of which nodes belong to which SCC
+                             //all nodes with the same number are in the same SCC, index represents node
+
+    //DFS for all subgraphs, populates SCCs vector with strongly connected components of that subgraph
     for (int i = 0; i < n; i++) {
-        if (disc[i] == -1) {
+        if (disc[i] == -1) { //if unvisited
             TarjanHelper(i, s, onStack, disc, low, SCCs);
         }
     }
 
-    return SCCs; //all nodes with the same number in the same SCC, nodes represented by index
+    return SCCs; 
 }
 
 void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
     static int discoveryTime = 0;
     static int sccID = 0;
 
+    //update discovery time and lowlink value of current node, push to stack and update onStack
     s.push(node);
     onStack[node] = true;
     disc[node] = low[node] = discoveryTime;
     discoveryTime++;
 
+    // visit neighbors of current node and update lowlink values
     for (auto& elem : adjList[node]) {
         int adjacentNode = elem.first;
-        if (disc[adjacentNode] == -1) {
+        if (disc[adjacentNode] == -1) { // if unvisited, recur
             TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs);
             low[node] = min(low[node], low[adjacentNode]);
         }
-        else if (onStack[adjacentNode]) { // if adjacent node not on stack, represents a cross edge between node and adjacent node
-                                          // so that means these two nodes are not a part of the same SCC, so do not process low[node]
+        else if (onStack[adjacentNode]) { // if adjacent node is on stack, that means it is a part of current SCC, so update lowlink value
+                                          // if adjacent node not on stack, represents a cross edge between node and adjacent node
+                                          // in other words, that means these two nodes are not a part of the same SCC, so do not update lowlink value
             low[node] = min(low[node], disc[adjacentNode]);
         }
     }
 
-    if (disc[node] == low[node]) {
+    if (disc[node] == low[node]) { // condition checks for if current node is root of complete SCC
+        //if true, pop stack and update sccID of each node until root is reached
         while(!s.empty()) {
             int p = s.top();
             s.pop();
