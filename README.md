@@ -72,7 +72,7 @@ If you want to use ur own custom datasets, please follow the format EXACTLY of n
 The first file represents each node and its name in a CSV manner. The second file represents the edge between two nodes and its weight in a CSV manner.
 Please make sure the node numbering is contiguous and starting from 0, the file is CSV separated with no spaces after commas, and the newline at the bottom of each file is included, otherwise a segfault will occur.
 Then, to run each algorithm, please follow the <a href="#running-instructions">Running Instructions</a>. 
-Reminder that all filepaths are relative to the build directory.
+Reminder that all filepaths are relative to the build directory.  
 Dijkstra's Example: ./main d EDGES_WEIGHTS_FILEPATH NODES_LABELS_FILEPATH SOURCE_NODE DEST_NODE OUTPUT_DIR
 
 
