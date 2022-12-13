@@ -46,12 +46,16 @@ Graph::Graph(unordered_map<int, vector<pair<int, double>>> m) {
 
 double Graph::Dijkstra(int source, int dest, bool airports) {
     shortestPath.clear();
+    //check if graph is empty
     if (adjList.empty()) {
         throw std::runtime_error("EMPTY GRAPH");
     }
+    //create set for visited and maps for previous and distances
     set<int> visited;
     unordered_map<int, int> prev;
     unordered_map<int, int> dist;
+    //airports = true means using airport IDs for the nodes and the openflights dataset
+    //airports = false means testing purposes for any generic values and ids for the nodes
     if (airports) {
         for (auto p : nodeToAirportName) {
             if (p.first == source) {
@@ -71,7 +75,6 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
             prev[i] = -1;
         }
     }
-    
     struct Compare //used for priority queue to compare distances in pairs
     {
         bool operator()(const pair<int, int>& lhs, const pair<int, int>& rhs)
@@ -79,10 +82,11 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
             return lhs.second > rhs.second;
         }
     };
-    priority_queue <pair<int, int>, vector<pair<int,int>>, Compare>  q; //replace greater probably
+    //build min heap
+    priority_queue <pair<int, int>, vector<pair<int,int>>, Compare>  q;
     pair<int, int> start(source, 0);
     q.push(start);
-    
+    //check if queue is empty or the shortest path node is in fact the destination
     while (!q.empty() && q.top().first != dest) {
         pair<int, int> curr = q.top();
         q.pop();
@@ -90,6 +94,7 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
             if (visited.count(p.first) == 1) {
                 continue;
             }
+            //check if the distance is shorter than what is listed, if it is then replace and chance previous node
             if (p.second + dist[curr.first] < dist[p.first]) {
                 dist[p.first] = p.second + dist[curr.first];
                 prev[p.first] = curr.first;
@@ -102,9 +107,10 @@ double Graph::Dijkstra(int source, int dest, bool airports) {
     if (q.empty()) { //no path from source to dest
         throw std::runtime_error("NO PATH FROM SOURCE TO DEST");
     }
-    if (!airports) {
+    if (!airports) { //return here if no need for route outputting (testing purposes)
         return dist[dest];
     }
+    //track back from previous and record the path from source to destination
     int e = dest;
     vector<int> path;
     while (true) {
