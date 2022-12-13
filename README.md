@@ -34,11 +34,12 @@ All major files that contain our functions and classes are in the [src directory
 ### Executable
 Make sure you are running the program in the [Docker](https://www.docker.com/) environment.
 Then do `mkdir build`,`cd build` and lastly, `cmake ..`.
-All the main functions/algorithms are in [`/entry/main`](https://github.com/clwang5/OpenFlights/blob/main/entry/main.cpp)
-For, output files, the directory can be specified (as long as it exists) of where to put these output files.
+All algorithms will be run through [`/entry/main`](https://github.com/clwang5/OpenFlights/blob/main/entry/main.cpp)
+For output files, the directory can be specified (needs to exist) of where to put these output files.
 For using custom datasets, please see <a href="#creativity">Creativity</a>.
-The required inputs as well as commands for each of the functionality are as follows:
+The required inputs as well as commands for each of the functionality are as follows:\
 
+All "Examples:" provided are using the processed data from the OpenFlights dataset. 
 
 1. Shortest Path Between Airports (Dijkstra's): 
   - Input: starting node number (represents an airport) and destination node number (both should be integer)
