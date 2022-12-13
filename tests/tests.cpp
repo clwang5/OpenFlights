@@ -82,21 +82,21 @@ TEST_CASE("BFS") {
     REQUIRE(g.BFS(4)==vector<int>{4,2,0,1,3});
 }
 
-TEST_CASE("file_2") {
+TEST_CASE("Complex, many SCCs, tests cross edge") {
     Graph graph = Graph("../data/tarjanstests/test2.dat","../data/tarjantests/dummy.dat");
     std::vector<int> output = graph.Tarjan();
     std::vector<int> expected = {0,4,3,3,3,3,2,1,5};
     REQUIRE(output == expected);
 }
 
-TEST_CASE("file_3") {
+TEST_CASE("Taken from Wikipedia example") {
     Graph graph = Graph("../data/tarjanstests/test3.dat","../data/tarjantests/dummy.dat");
     std::vector<int> output = graph.Tarjan();
     std::vector<int> expected = {0,3,3,3,2,1,1,1,1};
     REQUIRE(output == expected);
 }
 
-TEST_CASE("file_1") {
+TEST_CASE("Simple, multiple SCCs, one self-loop") {
     Graph graph = Graph("../data/tarjanstests/test1.dat","../data/tarjantests/dummy.dat");
     std::vector<int> output = graph.Tarjan();
     std::vector<int> expected = {0,3,3,2,2,3,1,1,2};
