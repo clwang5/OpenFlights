@@ -33,7 +33,7 @@ class Graph {
         vector<int> getShortestPath(); // getter for shortest path
 
     private:
-        void TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs); // helper function for Tarjan's algo
+        void TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs, int& discoveryTime, int& sccID); // helper function for Tarjan's algo
 
         unordered_map<int, string> nodeToAirportName; // map node to airport name for outputting purposes
 

@@ -81,3 +81,45 @@ TEST_CASE("BFS") {
     REQUIRE(g.BFS(3)==vector<int>{3,0,1,2,4});
     REQUIRE(g.BFS(4)==vector<int>{4,2,0,1,3});
 }
+
+TEST_CASE("file_2") {
+    Graph graph = Graph("../data/tarjanstests/test2.dat","../data/tarjantests/dummy.dat");
+    std::vector<int> output = graph.Tarjan();
+    std::vector<int> expected = {0,4,3,3,3,3,2,1,5};
+    REQUIRE(output == expected);
+}
+
+TEST_CASE("file_3") {
+    Graph graph = Graph("../data/tarjanstests/test3.dat","../data/tarjantests/dummy.dat");
+    std::vector<int> output = graph.Tarjan();
+    std::vector<int> expected = {0,3,3,3,2,1,1,1,1};
+    REQUIRE(output == expected);
+}
+
+TEST_CASE("file_1") {
+    Graph graph = Graph("../data/tarjanstests/test1.dat","../data/tarjantests/dummy.dat");
+    std::vector<int> output = graph.Tarjan();
+    std::vector<int> expected = {0,3,3,2,2,3,1,1,2};
+    REQUIRE(output == expected);
+}
+
+TEST_CASE("Complex, many directed edges and nodes, 1 SCC") {
+    Graph graph = Graph("../data/tarjanstests/test6.dat", "../data/tarjantests/dummy.dat");
+    vector<int> output = graph.Tarjan();
+    vector<int> expected = {0,0,0,0,0,0,0,0,0,0};
+    REQUIRE(output == expected);
+}
+
+TEST_CASE("Simple") {
+    Graph graph = Graph("../data/tarjanstests/test5.dat", "../data/tarjantests/dummy.dat");
+    vector<int> output = graph.Tarjan();
+    vector<int> expected = {2,2,2,1,0};
+    REQUIRE(output == expected);
+}
+
+TEST_CASE("Tarjan's with self loops and checking maximal SCC selected") {
+    Graph graph = Graph("../data/tarjanstests/test4.dat", "../data/tarjantests/dummy.dat");
+    vector<int> output = graph.Tarjan();
+    vector<int> expected = {1,1,1,0,0,2,2,2,3};
+    REQUIRE(output == expected);
+}

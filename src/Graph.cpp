@@ -158,7 +158,8 @@ vector<int> Graph::BFS(int source) {
 }
 
 vector<int> Graph::Tarjan() {
-    
+    int discoveryTime = 0;
+    int sccID = 0;
     int n = adjList.size();
 
     //stack for keeping track of nodes of strongly connected components
@@ -177,16 +178,15 @@ vector<int> Graph::Tarjan() {
     //DFS for all subgraphs, populates SCCs vector with strongly connected components of that subgraph
     for (int i = 0; i < n; i++) {
         if (disc[i] == -1) { //if unvisited
-            TarjanHelper(i, s, onStack, disc, low, SCCs);
+            TarjanHelper(i, s, onStack, disc, low, SCCs,discoveryTime,sccID);
         }
     }
 
     return SCCs; 
 }
 
-void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs) {
-    static int discoveryTime = 0;
-    static int sccID = 0;
+void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<int>& disc, vector<int>& low, vector<int>& SCCs, int& discoveryTime, int& sccID) {
+    
 
     //update discovery time and lowlink value of current node, push to stack and update onStack
     s.push(node);
@@ -198,7 +198,7 @@ void Graph::TarjanHelper(int node, stack<int>& s, vector<bool>& onStack, vector<
     for (auto& elem : adjList[node]) {
         int adjacentNode = elem.first;
         if (disc[adjacentNode] == -1) { // if unvisited, recur
-            TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs);
+            TarjanHelper(adjacentNode, s, onStack, disc, low, SCCs,discoveryTime,sccID);
             low[node] = min(low[node], low[adjacentNode]);
         }
         else if (onStack[adjacentNode]) { // if adjacent node is on stack, that means it is a part of current SCC, so update lowlink value
