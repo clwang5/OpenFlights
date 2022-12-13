@@ -26,34 +26,43 @@ All major files that contain our functions and classes are in the [src directory
 
 - Tests are in [`/tests`](https://github.com/clwang5/OpenFlights/tree/main/tests).
 
-- Project report, development log, contract, etc. are in [`/documents`](https://github.com/clwang5/OpenFlights/tree/main/documents). 
+- All documents (Project report, development log, contract, proposal, etc.) are in [`/documents`](https://github.com/clwang5/OpenFlights/tree/main/documents). 
 
 
 ## Running Instructions
 
 ### Executable
-Make sure you are running the program in [Docker](https://www.docker.com/).
+Make sure you are running the program in the [Docker](https://www.docker.com/) environment.
 Then do `mkdir build`,`cd build` and lastly, `cmake ..`.
-All the main functions are in [`/entry/main`](https://github.com/clwang5/OpenFlights/blob/main/entry/main.cpp)
-The required inputs for each of the functionality are as follows:
+All the main functions/algorithms are in [`/entry/main`](https://github.com/clwang5/OpenFlights/blob/main/entry/main.cpp)
+For, output files, the directory can be specified (as long as it exists) of where to put these output files.
+For using custom datasets, please see "Creativity".
+The required inputs as well as commands for each of the functionality are as follows:
+
 
 1. Shortest Path Between Airports (Dijkstra's): 
   - Input: starting node number (represents an airport) and destination node number (both should be integer)
   - Output: the shortest path (airports it passes through)
+  - Dijkstra's Algorithm Usage: ./main d ROUTE_DATA_FILEPATH AIRPORT_DATA_FILEPATH SOURCE_NODE DESTINATION_NODE OUTPUT_DIRECTORY
+  - Example: ./main d ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 328 430 ../outputs
 
 2. Strongly Connected Components (Tarjan's):
   - Input: No input
   - Output: Groups of all strongly connected components
+  - Tarjan's Algorithm Usage: ./main t ROUTE_DATA_FILEPATH AIRPORT_DATA_FILEPATH OUTPUT_DIRECTORY
+  - Example for OpenFlights: ./main t ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat ../outputs
 
 3. Breadth-First-Search:
   - Input: Starting node number (represents an airport)
   - Output: Sequence of nodes in the order it is traversed
+  - BFS Algorithm Usage: ./main b ROUTE_DATA_FILEPATH AIRPORT_DATA_FILEPATH SOURCE_NODE OUTPUT_DIRECTORY
+  - Example for OpenFlights: ./main b ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 10 ../outputs
 
-There are comments with more details about the functions as well as how to run command lines in `main.cc`.
+Note: All filepaths when executing ./main are relative to the build directory.
 
 ### Tests
 
-To run the test cases, run `make test` then `./test` in the build directory.
+To run the test suite, run `make test` then `./test` in the build directory.
 
 We constructed tests cases considering things such as empty graphs, directed graphs nodes with no outgoing edges, directed graphs with many paths that can be taken from every node and differing weights of those paths, and any other scenarios where edge cases may form. Our test cases focuses on the functionality of our graph data processing, Dijkstra's algorithm, Tarjan's algorithm, and Breadth-First-Search.
 
