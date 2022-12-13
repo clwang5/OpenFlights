@@ -55,11 +55,11 @@ There are comments with more details about the functions as well as how to run c
 
 To run the test cases, run `make test` then `./test` in the build directory.
 
-We constructed tests cases in consideration for empty graphs, undirected graphs, and any other scenarios where edge cases may form. Our test cases focuses on the functionality of our graph data processing, Dijkstra's algorithm, Tarjan's algorithm, and Breadth-First-Search.
+We constructed tests cases considering things such as empty graphs, directed graphs nodes with no outgoing edges, directed graphs with many paths that can be taken from every node and differing weights of those paths, and any other scenarios where edge cases may form. Our test cases focuses on the functionality of our graph data processing, Dijkstra's algorithm, Tarjan's algorithm, and Breadth-First-Search.
 
 ## Creativity
-If u want to use ur own custom datasets, please follow the format of edges and weights in the US routes contiguous.dat file and the US airports contiguous.dat files.
-Please make sure the node numbering is contiguous and starting from 0 and the format is followed.
+If you want to use ur own custom datasets, please follow the format EXACTLY of edges and weights in [this file](https://github.com/clwang5/OpenFlights/blob/main/data/US_airports_contiguous.dat) and [this file](https://github.com/clwang5/OpenFlights/blob/main/data/US_routes_contiguous.dat).
+Please make sure the node numbering is contiguous and starting from 0 and as well as including the newline at the bottom of each file, otherwise a segfault will occur.
 
 
 ## Team
