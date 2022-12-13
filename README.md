@@ -39,7 +39,7 @@ For output files, the directory can be specified (needs to exist) of where to pu
 For using custom datasets, please see <a href="#creativity">Creativity</a>.
 The required inputs as well as commands for each of the functionality are as follows:
 
-All "Examples:" provided are using the processed data from the OpenFlights dataset. Again, please see <a href="#creativity">Creativity</a> for using custom datasets.
+All "Example:" provided are using the processed data from the OpenFlights dataset. Again, please see <a href="#creativity">Creativity</a> for using custom datasets.
 
 1. Shortest Path Between Airports (Dijkstra's): 
   - Input: starting node number (represents an airport) and destination node number (both should be integer)
