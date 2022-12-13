@@ -146,8 +146,9 @@ vector<int> Graph::BFS(int source) {
         int curr = que.front();
         path.push_back(curr);
         que.pop();
+        // traverse through the neighbors of every node
         for (auto neighbor : adjList[curr]) {
-            if (visited.count(neighbor.first) == 0) { // not in visited
+            if (visited.count(neighbor.first) == 0) { // if have not visited the node yet
                 que.push(neighbor.first);
                 visited.insert(neighbor.first);
             }
