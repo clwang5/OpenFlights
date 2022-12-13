@@ -1,3 +1,4 @@
-Source: Southeast Iowa Regional Airport
-Chicago O'Hare International Airport
-Destination: Abraham Lincoln Capital Airport
+Source: Casper-Natrona County International Airport
+Denver International Airport
+Destination: Yampa Valley Airport
+Overall Distance: 370 miles

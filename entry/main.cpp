@@ -2,7 +2,10 @@
 #include <fstream>
 #include "Graph.h"
 
-//example:            ./main d ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 328 430 ../outputs
+// example:      
+//Dijkstra's: ./main d ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 328 430 ../outputs
+//Tarjan's: ./main t ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat ../outputs
+//BFS: ./main b ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 10 ../outputs
 
 int main(int argc, char* argv[]) {
     if (argc < 4) {
@@ -56,7 +59,7 @@ int main(int argc, char* argv[]) {
 
         string source = argv[4];
         string dest = argv[5];
-        graph.Dijkstra(stoi(source), stoi(dest), true);
+        int distance = graph.Dijkstra(stoi(source), stoi(dest), true);
         vector<int> path = graph.getShortestPath();
 
         string outputDir = argv[6];
@@ -72,6 +75,7 @@ int main(int argc, char* argv[]) {
             file << graph.getNodeToAirportName()[node] << endl;
             count++;
         }
+        file << "Overall Distance: " << distance << " miles";
 
         return 0;
     }

@@ -1,229 +1,218 @@
-BFS Source: Casper-Natrona County International Airport
-Salt Lake City International Airport
-McCarran International Airport
-Denver International Airport
+BFS Source: Middle Georgia Regional Airport
+Hartsfield Jackson Atlanta International Airport
+Orlando International Airport
+Greenbrier Valley Airport
+Key Field
+Northwest Alabama Regional Airport
+Hattiesburg Laurel Regional Airport
+Tupelo Regional Airport
+Kalamazoo Battle Creek International Airport
+Lovell Field
+The Eastern Iowa Airport
+Yeager Airport
+Cincinnati Northern Kentucky International Airport
+Evansville Regional Airport
+Fort Wayne International Airport
+Piedmont Triad International Airport
+Greenville Spartanburg International Airport
+Capital City Airport
+Blue Grass Airport
+MBS International Airport
+Minneapolis-St Paul International/Wold-Chamberlain Airport
+Roanoke–Blacksburg Regional Airport
+Syracuse Hancock International Airport
+McGhee Tyson Airport
+Northwest Arkansas Regional Airport
 Charlotte Douglas International Airport
 Dallas Fort Worth International Airport
-Los Angeles International Airport
+Miami International Airport
 Chicago O'Hare International Airport
 Philadelphia International Airport
 Phoenix Sky Harbor International Airport
-Hartsfield Jackson Atlanta International Airport
-Cincinnati Northern Kentucky International Airport
-Louis Armstrong New Orleans International Airport
-Portland International Airport
-San Diego International Airport
-Seattle Tacoma International Airport
-John F Kennedy International Airport
-Long Beach /Daugherty Field/ Airport
-Albuquerque International Sunport
-Austin Bergstrom International Airport
-Billings Logan International Airport
-Nashville International Airport
-Boise Air Terminal/Gowen Field
-General Edward Lawrence Logan International Airport
-Bert Mooney Airport
-Bob Hope Airport
-Baltimore/Washington International Thurgood Marshall Airport
-Gallatin Field
-Cedar City Regional Airport
-Canyonlands Field
-Yellowstone Regional Airport
-City of Colorado Springs Municipal Airport
-Ronald Reagan Washington National Airport
-Detroit Metropolitan Wayne County Airport
-Elko Regional Airport
-Mahlon Sweet Field
-Newark Liberty International Airport
-Hector International Airport
-Fresno Yosemite International Airport
-Glacier Park International Airport
-Gillette Campbell County Airport
-Spokane International Airport
-Grand Junction Regional Airport
-Great Falls International Airport
-Helena Regional Airport
-George Bush Intercontinental Houston Airport
-Idaho Falls Regional Airport
-Indianapolis International Airport
-Jackson Hole Airport
-Lewiston Nez Perce County Airport
-Kansas City International Airport
-Orlando International Airport
-Memphis International Airport
-Rogue Valley International Medford Airport
-Dane County Regional Truax Field
-Missoula International Airport
-Minneapolis-St Paul International/Wold-Chamberlain Airport
-Metropolitan Oakland International Airport
-Will Rogers World Airport
-Eppley Airfield
-Ontario International Airport
-Pocatello Regional Airport
-Tri Cities Airport
-Palm Springs International Airport
-Rapid City Regional Airport
-Roberts Field
-Raleigh Durham International Airport
-Southwest Wyoming Regional Airport
-Reno Tahoe International Airport
-San Antonio International Airport
-San Francisco International Airport
-St George Municipal Airport
-Norman Y. Mineta San Jose International Airport
-Sacramento International Airport
-John Wayne Airport-Orange County Airport
-St Louis Lambert International Airport
-Tulsa International Airport
-Tucson International Airport
-Joslin Field Magic Valley Regional Airport
-Vernal Regional Airport
-Vancouver International Airport
-Chicago Midway International Airport
-Manchester-Boston Regional Airport
-General Mariano Escobedo International Airport
-Miami International Airport
+Denver International Airport
 Lester B. Pearson International Airport
-Montreal / Pierre Elliott Trudeau International Airport
-Bellingham International Airport
-William P Hobby Airport
-General Mitchell International Airport
-Theodore Francis Green State Airport
-Tampa International Airport
-Appleton International Airport
-Phoenix-Mesa-Gateway Airport
-Bismarck Municipal Airport
-The Eastern Iowa Airport
-Duluth International Airport
-Des Moines International Airport
-Joe Foss Field Airport
-Grand Forks International Airport
-Central Nebraska Regional Airport
-Gerald R. Ford International Airport
-Wichita Eisenhower National Airport
-Laredo International Airport
-Mc Allen Miller International Airport
-Quad City International Airport
-Minot International Airport
-Monterey Peninsula Airport
-General Wayne A. Downing Peoria International Airport
-Chicago Rockford International Airport
-South Bend Regional Airport
-Stockton Metropolitan Airport
-Springfield Branson National Airport
-Shreveport Regional Airport
-Santa Maria Pub/Capt G Allan Hancock Field
-Northwest Arkansas Regional Airport
-Fort Lauderdale Hollywood International Airport
-Cleveland Hopkins International Airport
-Washington Dulles International Airport
-Albany International Airport
-Rick Husband Amarillo International Airport
-Bradley International Airport
-Birmingham-Shuttlesworth International Airport
-Buffalo Niagara International Airport
-John Glenn Columbus International Airport
-El Paso International Airport
-Bishop International Airport
-Jacksonville International Airport
-Lubbock Preston Smith International Airport
-Bill & Hillary Clinton National Airport/Adams Field
-Midland International Airport
-Pittsburgh International Airport
-Louisville International Standiford Field
-Victoria International Airport
-La Guardia Airport
-Alliance Municipal Airport
-San Luis Valley Regional Bergman Field
-Branson Airport
-Central Illinois Regional Airport at Bloomington-Normal
-Cheyenne Regional Jerry Olson Field
-Four Corners Regional Airport
-Piedmont Triad International Airport
-New Castle Airport
-Harrisburg International Airport
-Newport News Williamsburg International Airport
-Pierre Regional Airport
-Southwest Florida International Airport
-Santa Barbara Municipal Airport
-McGhee Tyson Airport
-Norfolk International Airport
-Aspen-Pitkin Co/Sardy Field
-Meadows Field
-James M Cox Dayton International Airport
-Dickinson Theodore Roosevelt Regional Airport
-Durango La Plata County Airport
-Eagle County Regional Airport
-Gunnison Crested Butte Regional Airport
-Yampa Valley Airport
-Huntsville International Carl T Jones Field
-Sloulin Field International Airport
-Laramie Regional Airport
-Lincoln Airport
-Montrose Regional Airport
-Pueblo Memorial Airport
-Santa Fe Municipal Airport
-Akron Canton Regional Airport
-Western Neb. Rgnl/William B. Heilig Airport
-Cortez Municipal Airport
-Dodge City Regional Airport
-North Platte Regional Airport Lee Bird Field
-Liberal Mid-America Regional Airport
-Mc Cook Ben Nelson Regional Airport
-Page Municipal Airport
-Riverton Regional Airport
-Sheridan County Airport
 Lehigh Valley International Airport
+Albuquerque International Sunport
+Southwest Georgia Regional Airport
+Alexandria International Airport
 Augusta Regional At Bush Field
+Albany International Airport
+Appleton International Airport
+Austin Bergstrom International Airport
 Asheville Regional Airport
 Wilkes Barre Scranton International Airport
+Bradley International Airport
+Birmingham-Shuttlesworth International Airport
+Central Illinois Regional Airport at Bloomington-Normal
+Nashville International Airport
+General Edward Lawrence Logan International Airport
+Brunswick Golden Isles Airport
 Baton Rouge Metropolitan Airport
+Burlington International Airport
+Buffalo Niagara International Airport
+Baltimore/Washington International Thurgood Marshall Airport
 Columbia Metropolitan Airport
-Lovell Field
+Akron Canton Regional Airport
 Charlottesville Albemarle Airport
 Charleston Air Force Base-International Airport
-Yeager Airport
+Cleveland Hopkins International Airport
+John Glenn Columbus International Airport
+City of Colorado Springs Municipal Airport
+Columbus Metropolitan Airport
 Daytona Beach International Airport
+Dallas Love Field
+James M Cox Dayton International Airport
+Ronald Reagan Washington National Airport
+Dothan Regional Airport
+Des Moines International Airport
+Detroit Metropolitan Wayne County Airport
+Northwest Florida Beaches International Airport
+El Paso International Airport
 Coastal Carolina Regional Airport
+Newark Liberty International Airport
+Key West International Airport
 Fayetteville Regional Grannis Field
-Florence Regional Airport
-Grand Bahama International Airport
+Fort Lauderdale Hollywood International Airport
+Bishop International Airport
+Fort Smith Regional Airport
 Gainesville Regional Airport
 Gulfport Biloxi International Airport
-Greenville Spartanburg International Airport
-Hilton Head Airport
+Austin Straubel International Airport
+Robert Gray  Army Air Field Airport
+Gerald R. Ford International Airport
+Golden Triangle Regional Airport
 Westchester County Airport
-Tri-State/Milton J. Ferguson Field
+Huntsville International Carl T Jones Field
+Washington Dulles International Airport
+George Bush Intercontinental Houston Airport
+Wichita Eisenhower National Airport
 Wilmington International Airport
+Indianapolis International Airport
 Jackson-Medgar Wiley Evers International Airport
-Blue Grass Airport
-Lynchburg Regional Preston Glenn Field
+Jacksonville International Airport
+John F Kennedy International Airport
+McCarran International Airport
+Los Angeles International Airport
+Lafayette Regional Airport
+La Guardia Airport
+Bill & Hillary Clinton National Airport/Adams Field
+Kansas City International Airport
+Harrisburg International Airport
+Chicago Midway International Airport
+Memphis International Airport
 Montgomery Regional (Dannelly Field) Airport
+Manchester-Boston Regional Airport
+General Mitchell International Airport
 Melbourne International Airport
+Quad City International Airport
+Monroe Regional Airport
 Mobile Regional Airport
+Dane County Regional Truax Field
+Louis Armstrong New Orleans International Airport
+General Mariano Escobedo International Airport
 Myrtle Beach International Airport
 Lynden Pindling International Airport
 Albert J Ellis Airport
+Will Rogers World Airport
+Eppley Airfield
+Norfolk International Airport
 Palm Beach International Airport
-Pitt Greenville Airport
+Portland International Airport
+Newport News Williamsburg International Airport
+General Wayne A. Downing Peoria International Airport
+Pittsburgh International Airport
 Pensacola Regional Airport
+Theodore Francis Green State Airport
 Portland International Jetport Airport
+Raleigh Durham International Airport
 Richmond International Airport
-Roanoke–Blacksburg Regional Airport
 Greater Rochester International Airport
+Southwest Florida International Airport
+San Diego International Airport
+San Antonio International Airport
 Savannah Hilton Head International Airport
-Salisbury Ocean City Wicomico Regional Airport
+South Bend Regional Airport
+Louisville International Standiford Field
+Seattle Tacoma International Airport
+San Francisco International Airport
+Springfield Branson National Airport
+Shreveport Regional Airport
+Salt Lake City International Airport
+Sacramento International Airport
+John Wayne Airport-Orange County Airport
 Sarasota Bradenton International Airport
-Syracuse Hancock International Airport
+St Louis Lambert International Airport
 Tallahassee Regional Airport
+Tampa International Airport
 Tri-Cities Regional TN/VA Airport
+Tulsa International Airport
+Tucson International Airport
+Valdosta Regional Airport
 Destin-Ft Walton Beach Airport
-Ottawa Macdonald-Cartier International Airport
+Montreal / Pierre Elliott Trudeau International Airport
+William P Hobby Airport
+Hector International Airport
+Grand Bahama International Airport
+Joe Foss Field Airport
+Norman Y. Mineta San Jose International Airport
 Trenton Mercer Airport
+Leonard M Thompson International Airport
+Worcester Regional Airport
+Stewart International Airport
+New Castle Airport
+Long Island Mac Arthur Airport
+Atlantic City International Airport
+Arnold Palmer Regional Airport
+Mid Delta Regional Airport
+St Petersburg Clearwater International Airport
+Orlando Sanford International Airport
+Phoenix-Mesa-Gateway Airport
+Charlotte County Airport
+Morristown Municipal Airport
+Aberdeen Regional Airport
+Alpena County Regional Airport
+Billings Logan International Airport
+Bismarck Municipal Airport
+Bemidji Regional Airport
+Boise Air Terminal/Gowen Field
+Brainerd Lakes Regional Airport
+Gallatin Field
+Central Wisconsin Airport
+Dickinson Theodore Roosevelt Regional Airport
+Duluth International Airport
+Glacier Park International Airport
+Spokane International Airport
+Grand Forks International Airport
+Great Falls International Airport
+Range Regional Airport
+Helena Regional Airport
+Ford Airport
+Falls International Airport
+Sloulin Field International Airport
+Lincoln Airport
+La Crosse Municipal Airport
+Minot International Airport
+Missoula International Airport
+Tri Cities Airport
+Palm Springs International Airport
+Rapid City Regional Airport
+Rhinelander Oneida County Airport
+Rochester International Airport
+Cherry Capital Airport
+Vancouver International Airport
+Metropolitan Oakland International Airport
+Watertown Regional Airport
+Florence Regional Airport
+Hilton Head Airport
+Tri-State/Milton J. Ferguson Field
+Lynchburg Regional Preston Glenn Field
+Pitt Greenville Airport
+Salisbury Ocean City Wicomico Regional Airport
+Ottawa Macdonald-Cartier International Airport
 Cincinnati Municipal Airport Lunken Field
 Abilene Regional Airport
 Waco Regional Airport
-Alexandria International Airport
+Rick Husband Amarillo International Airport
 Southeast Texas Regional Airport
 Brownsville South Padre Island International Airport
 Easterwood Field
@@ -231,61 +220,47 @@ University of Illinois Willard Airport
 Columbia Regional Airport
 Corpus Christi International Airport
 General Roberto Fierro Villalobos International Airport
-Evansville Regional Airport
-Fort Smith Regional Airport
-Fort Wayne International Airport
+Durango La Plata County Airport
+Fresno Yosemite International Airport
 Garden City Regional Airport
 East Texas Regional Airport
-Robert Gray  Army Air Field Airport
+Grand Junction Regional Airport
+Central Nebraska Regional Airport
 Joplin Regional Airport
 Lawton Fort Sill Regional Airport
+Lubbock Preston Smith International Airport
 Lake Charles Regional Airport
-Lafayette Regional Airport
+Laredo International Airport
+Midland International Airport
+Mc Allen Miller International Airport
 Manhattan Regional Airport
-Monroe Regional Airport
+Ontario International Airport
+Reno Tahoe International Airport
 Roswell International Air Center Airport
+Santa Fe Municipal Airport
 San Angelo Regional Mathis Field
 Abraham Lincoln Capital Airport
 Sheppard Air Force Base-Wichita Falls Municipal Airport
 Francisco Sarabia International Airport
 Texarkana Regional Webb Field
 Tyler Pounds Regional Airport
-Mammoth Yosemite Airport
-Charles M. Schulz Sonoma County Airport
-General Ignacio P. Garcia International Airport
-Loreto International Airport
-Provo Municipal Airport
-Mc Clellan-Palomar Airport
-San Luis County Regional Airport
-Yuma MCAS/Yuma International Airport
-Merced Regional Macready Field
-Ernest A. Love Field
-Visalia Municipal Airport
+North Eleuthera Airport
+Naples Municipal Airport
 Southeast Iowa Regional Airport
 Decatur Airport
 Waterloo Regional Airport
 Watertown International Airport
-Kalamazoo Battle Creek International Airport
-Central Wisconsin Airport
 Dubuque Regional Airport
-Austin Straubel International Airport
-La Crosse Municipal Airport
 Sawyer International Airport
-Rochester International Airport
 Sioux Gateway Col. Bud Day Field
 Toledo Express Airport
-Cherry Capital Airport
 Waterloo Airport
 Quebec Jean Lesage International Airport
 London Airport
-Atlantic City International Airport
-Burlington International Airport
 Houghton County Memorial Airport
 Chippewa Valley Regional Airport
 Elmira Corning Regional Airport
 Topeka Regional Airport - Forbes Field
-Capital City Airport
-MBS International Airport
 Muskegon County Airport
 Barkley Regional Airport
 University Park Airport
@@ -295,45 +270,63 @@ Bangor International Airport
 Erie International Tom Ridge Field
 Tweed New Haven Airport
 Williamsport Regional Airport
-Long Island Mac Arthur Airport
 Ithaca Tompkins Regional Airport
-Stewart International Airport
+Meadows Field
+Bob Hope Airport
 Flagstaff Pulliam Airport
+Long Beach /Daugherty Field/ Airport
+Monterey Peninsula Airport
+Santa Barbara Municipal Airport
+San Luis County Regional Airport
+Yuma MCAS/Yuma International Airport
+General Ignacio P. Garcia International Airport
 Show Low Regional Airport
-Greenbrier Valley Airport
-Middle Georgia Regional Airport
-Key Field
-Northwest Alabama Regional Airport
-Hattiesburg Laurel Regional Airport
-Tupelo Regional Airport
-Southwest Georgia Regional Airport
-Brunswick Golden Isles Airport
-Columbus Metropolitan Airport
-Dallas Love Field
-Dothan Regional Airport
-Northwest Florida Beaches International Airport
-Key West International Airport
-Golden Triangle Regional Airport
-Valdosta Regional Airport
-Charlotte County Airport
-Orlando Sanford International Airport
-Morristown Municipal Airport
-Southwest Oregon Regional Airport
-Eastern Oregon Regional At Pendleton Airport
-Crater Lake-Klamath Regional Airport
-Imperial County Airport
-Walla Walla Regional Airport
-Pangborn Memorial Airport
-Pullman Moscow Regional Airport
-Yakima Air Terminal McAllister Field
+Page Municipal Airport
+Alliance Municipal Airport
+San Luis Valley Regional Bergman Field
+Branson Airport
+Cheyenne Regional Jerry Olson Field
+Mahlon Sweet Field
+Four Corners Regional Airport
+Pierre Regional Airport
+Aspen-Pitkin Co/Sardy Field
+Yellowstone Regional Airport
+Casper-Natrona County International Airport
+Eagle County Regional Airport
+Gillette Campbell County Airport
+Gunnison Crested Butte Regional Airport
+Yampa Valley Airport
+Idaho Falls Regional Airport
+Jackson Hole Airport
+Laramie Regional Airport
+Rogue Valley International Medford Airport
+Montrose Regional Airport
+Pueblo Memorial Airport
+Roberts Field
+Southwest Wyoming Regional Airport
+St George Municipal Airport
+Western Neb. Rgnl/William B. Heilig Airport
+Cortez Municipal Airport
+Dodge City Regional Airport
+North Platte Regional Airport Lee Bird Field
+Liberal Mid-America Regional Airport
+Mc Cook Ben Nelson Regional Airport
+Riverton Regional Airport
+Sheridan County Airport
+Sault Ste Marie Airport
+Kingston Norman Rogers Airport
+Windsor Airport
+Thunder Bay Airport
+Sudbury Airport
+Timmins/Victor M. Power
+North Bay Jack Garland Airport
+Victoria International Airport
+Chris Hadfield Airport
 Cavern City Air Terminal
 Los Alamos Airport
+Massena International Richards Field
+Ogdensburg International Airport
 Valley International Airport
-Dawson Community Airport
-Wokal Field Glasgow International Airport
-Havre City County Airport
-L M Clayton Airport
-Sidney - Richland Regional Airport
 Athens Ben Epps Airport
 McKellar-Sipes Regional Airport
 Nantucket Memorial Airport
@@ -349,74 +342,19 @@ Adirondack Regional Airport
 Plattsburgh International Airport
 Northern Maine Regional Airport at Presque Isle
 Billy Bishop Toronto City Centre Airport
-Alpena County Regional Airport
-Chippewa County International Airport
-Delta County Airport
-Pellston Regional Airport of Emmet County Airport
-St Petersburg Clearwater International Airport
-Victoria Regional Airport
-Lea County Regional Airport
-Plan De Guadalupe International Airport
-Boone County Airport
-Salina Municipal Airport
-Leonard M Thompson International Airport
-Worcester Regional Airport
-Arnold Palmer Regional Airport
-South Arkansas Regional At Goodwin Field
-Memorial Field
-Aberdeen Regional Airport
-Bemidji Regional Airport
-Brainerd Lakes Regional Airport
-Range Regional Airport
-Ford Airport
-Falls International Airport
-Rhinelander Oneida County Airport
-Watertown Regional Airport
-California Redwood Coast-Humboldt County Airport
-Jack Mc Namara Field Airport
-Chico Municipal Airport
-Modesto City Co-Harry Sham Field
-Redding Municipal Airport
-Jonesboro Municipal Airport
-Cape Girardeau Regional Airport
-Kirksville Regional Airport
-Williamson County Regional Airport
-Owensboro Daviess County Airport
-Waynesville-St. Robert Regional Forney field
-Quincy Regional Baldwin Field
-Trail Airport
-Nanaimo Airport
-Castlegar/West Kootenay Regional Airport
-Manistee Co Blacker Airport
-Abraham González International Airport
-Bachigualato Federal International Airport
-General Abelardo L. Rodríguez International Airport
-North Eleuthera Airport
-Naples Municipal Airport
-Sault Ste Marie Airport
-Kingston Norman Rogers Airport
-Windsor Airport
-Thunder Bay Airport
-Sudbury Airport
-Timmins/Victor M. Power
-North Bay Jack Garland Airport
-Chris Hadfield Airport
-Rouyn Noranda Airport
-Baie Comeau Airport
-CFB Bagotville
-Val-d'Or Airport
-Mont Joli Airport
-Ogden Hinckley Airport
-Thief River Falls Regional Airport
-South Bimini Airport
-Governor's Harbour Airport
-Treasure Cay Airport
-Niagara Falls International Airport
 Bradford Regional Airport
 DuBois Regional Airport
 Venango Regional Airport
 Chautauqua County-Jamestown Airport
 Mid Ohio Valley Regional Airport
+South Arkansas Regional At Goodwin Field
+Chippewa County International Airport
+Delta County Airport
+Pellston Regional Airport of Emmet County Airport
+South Bimini Airport
+Governor's Harbour Airport
+Treasure Cay Airport
+Niagara Falls International Airport
 Hagerstown Regional Richard A Henson Field
 Lancaster Airport
 Altoona Blair County Airport
@@ -424,25 +362,87 @@ Raleigh County Memorial Airport
 John Murtha Johnstown Cambria County Airport
 Morgantown Municipal Walter L. Bill Hart Field
 Shenandoah Valley Regional Airport
-Massena International Richards Field
-Ogdensburg International Airport
-Chadron Municipal Airport
-Worland Municipal Airport
-Huron Regional Airport
-Grand Canyon National Park Airport
+Victoria Regional Airport
+Lea County Regional Airport
+Plan De Guadalupe International Airport
+Bellingham International Airport
+Chicago Rockford International Airport
+Stockton Metropolitan Airport
+Santa Maria Pub/Capt G Allan Hancock Field
+Mammoth Yosemite Airport
+Charles M. Schulz Sonoma County Airport
+Loreto International Airport
+Provo Municipal Airport
+Mc Clellan-Palomar Airport
+Merced Regional Macready Field
+Ernest A. Love Field
+Visalia Municipal Airport
+Boone County Airport
+Salina Municipal Airport
+Manistee Co Blacker Airport
+Memorial Field
+Abraham González International Airport
+Bachigualato Federal International Airport
+General Abelardo L. Rodríguez International Airport
 Youngstown Warren Regional Airport
 Arthur's Town Airport
 Rock Sound Airport
+Southwest Oregon Regional Airport
+Eastern Oregon Regional At Pendleton Airport
+Crater Lake-Klamath Regional Airport
+Imperial County Airport
+Walla Walla Regional Airport
+Pangborn Memorial Airport
+Lewiston Nez Perce County Airport
+Pullman Moscow Regional Airport
+Yakima Air Terminal McAllister Field
+California Redwood Coast-Humboldt County Airport
+Jack Mc Namara Field Airport
+Chico Municipal Airport
+Modesto City Co-Harry Sham Field
+Redding Municipal Airport
+Bert Mooney Airport
+Cedar City Regional Airport
+Canyonlands Field
+Elko Regional Airport
+Pocatello Regional Airport
+Joslin Field Magic Valley Regional Airport
+Vernal Regional Airport
+Jonesboro Municipal Airport
+Cape Girardeau Regional Airport
+Kirksville Regional Airport
+Williamson County Regional Airport
+Owensboro Daviess County Airport
+Waynesville-St. Robert Regional Forney field
+Quincy Regional Baldwin Field
+Rouyn Noranda Airport
+Baie Comeau Airport
+CFB Bagotville
+Val-d'Or Airport
+Mont Joli Airport
 Northeast Florida Regional Airport
+Rickenbacker International Airport
+Scott AFB/Midamerica Airport
+North Central West Virginia Airport
+Portsmouth International at Pease Airport
+Ogden Hinckley Airport
+Dawson Community Airport
+Wokal Field Glasgow International Airport
+Havre City County Airport
+L M Clayton Airport
+Sidney - Richland Regional Airport
+Thief River Falls Regional Airport
+Trail Airport
+Nanaimo Airport
+Castlegar/West Kootenay Regional Airport
+Montréal / Saint-Hubert Airport
 Ciudad Obregón International Airport
 Valle del Fuerte International Airport
 General Rodolfo Sánchez Taboada International Airport
-Montréal / Saint-Hubert Airport
-Mid Delta Regional Airport
-Scott AFB/Midamerica Airport
-North Central West Virginia Airport
-Rickenbacker International Airport
-Portsmouth International at Pease Airport
+Grand Canyon National Park Airport
+Chadron Municipal Airport
+Worland Municipal Airport
+Huron Regional Airport
+Fort Frances Municipal Airport
 New Bedford Regional Airport
 Teterboro Airport
-Fort Frances Municipal Airport
