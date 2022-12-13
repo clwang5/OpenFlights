@@ -37,9 +37,9 @@ Then do `mkdir build`,`cd build` and lastly, `cmake ..`.
 All algorithms will be run through [`/entry/main`](https://github.com/clwang5/OpenFlights/blob/main/entry/main.cpp)
 For output files, the directory can be specified (needs to exist) of where to put these output files.
 For using custom datasets, please see <a href="#creativity">Creativity</a>.
-The required inputs as well as commands for each of the functionality are as follows:\
+The required inputs as well as commands for each of the functionality are as follows:
 
-All "Examples:" provided are using the processed data from the OpenFlights dataset. 
+All "Examples:" provided are using the processed data from the OpenFlights dataset. Again, please see <a href="#creativity">Creativity</a> for using custom datasets.
 
 1. Shortest Path Between Airports (Dijkstra's): 
   - Input: starting node number (represents an airport) and destination node number (both should be integer)
@@ -51,13 +51,13 @@ All "Examples:" provided are using the processed data from the OpenFlights datas
   - Input: No input
   - Output: Groups of all strongly connected components
   - Tarjan's Algorithm Usage: ./main t ROUTE_DATA_FILEPATH AIRPORT_DATA_FILEPATH OUTPUT_DIRECTORY
-  - Example for OpenFlights: ./main t ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat ../outputs
+  - Example: ./main t ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat ../outputs
 
 3. Breadth-First-Search:
   - Input: Starting node number (represents an airport)
   - Output: Sequence of nodes in the order it is traversed
   - BFS Algorithm Usage: ./main b ROUTE_DATA_FILEPATH AIRPORT_DATA_FILEPATH SOURCE_NODE OUTPUT_DIRECTORY
-  - Example for OpenFlights: ./main b ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 10 ../outputs
+  - Example: ./main b ../data/US_routes_contiguous.dat ../data/US_airports_contiguous.dat 10 ../outputs
 
 Note: All filepaths when executing ./main are relative to the build directory.
 
