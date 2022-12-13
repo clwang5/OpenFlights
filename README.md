@@ -4,17 +4,19 @@
   <a href="#data">Data</a> •
   <a href="#repo-structure">Repo Structure</a> •
   <a href="#running-instructions">Running Instructions</a> •
-  <a href="#creativity">Creativity</a>
+  <a href="#creativity">Creativity</a> •
   <a href="#team">Team</a>
 </p>
 
 ## [Presentation Video](https://mediaspace.illinois.edu/media/t/1_urny4ezr)
 
+
 ## Data
 We are using the [openflights.org]([https://openflights.org/data.html](https://openflights.org/data.html)) data and focusing on the following two files:
 
-- [Airport database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat))
+- [Airport database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat)
 - [Route database](https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat)
+
 
 ## Repo Structure
 
@@ -26,6 +28,9 @@ All major files that contain our functions and classes are in the [src directory
 - Tests are in [`/tests`](https://github.com/clwang5/OpenFlights/tree/main/tests).
 
 - Project report, development log, contract, etc. are in [`/documents`](https://github.com/clwang5/OpenFlights/tree/main/documents). 
+
+
+## Running Instructions
 
 ### Executable
 Make sure you are running the program in [Docker](https://www.docker.com/).
@@ -51,9 +56,11 @@ There are comments with more details about the functions as well as how to run c
 
 To run the test cases, run `make test` then `./test` in the build directory.
 
+
 ## Creativity
 If u want to use ur own custom datasets, please follow the format of edges and weights in the US routes contiguous.dat file and the US airports contiguous.dat files.
-Please make sure the node numbering is contiguous and starting from 0 and the format is followed
+Please make sure the node numbering is contiguous and starting from 0 and the format is followed.
+
 
 ## Team
 - Charleston Wang
